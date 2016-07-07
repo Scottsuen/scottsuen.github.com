@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+         **
+         * Auther:      掌心
+         * Contact:     http://www.zhanxin.info
+         * Create:      2013.08.10
+         * Theme Name:  Kunka
+         * Authorize:   BY-NC-SA
+         **
+        -->
+        <meta charset="utf-8">
+        <title>书写具备一致风格、通俗易懂 JavaScript 的原则 - 飞鸟集</title>
+        <!-- meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="generator" content="Jekyll" />
+        <meta name="author" content="minixalpha" />
+        <meta name="description" content="人生到处知何似，应似飞鸿踏雪泥" />
+        <meta name="keywords" content="" />
+        <!-- atom -->
+        <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+        <link rel="shortcut icon" href="http://jekyllrb.com/favicon.png" type="image/x-icon" />
+        <!-- font-awesome -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Spirax' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/themes/kunka/css/syntax.css">
+        <link rel="stylesheet" href="/themes/kunka/css/main.css">
+        
+    </head>
+    <body>
+        <div class="head fn-clear">
+            <div class="header">
+                <h1 class="logo">
+                    <a href="/"><i class="icon-anchor"></i></a>
+                </h1>
+                <nav class="nav">
+                    <ul>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="/index.html">
+                                首页
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="/navigations/categories.html">
+                                分类目录
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="/navigations/archives.html">
+                                文章归档
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="/navigations/contact.html">
+                                联系我
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="/navigations/links.html">
+                                友情链接
+                            </a>
+                            
+                        </li>
+                        
+                    </ul>
+                </nav>
+                <div class="follow">
+                    
+                    <a href="/atom.xml" target="_blank"><i class="icon-rss"></i></a>
+                    
+                    <a href="http://weibo.com" target="_blank"><i class="icon-weibo"></i></a>
+                    
+                    <a href="http://renren.com" target="_blank"><i class="icon-renren"></i></a>
+                    
+                    <a href="http://github.com" target="_blank"><i class="icon-github-alt"></i></a>
+                    
+                    <a href="http://twitter.com" target="_blank"><i class="icon-twitter"></i></a>
+                    
+                    <a href="http://google.com" target="_blank"><i class="icon-google-plus"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="contain fn-clear">
+            <div class="container fn-clear">
+                <div class="main">
+                    
+    <div class="article article-post">
+    <h2 class="title">书写具备一致风格、通俗易懂 JavaScript 的原则</h2>
+    <div class="info">
+        <span class="info-title"><i class="icon-calendar"></i> Published: </span>
+        <span class="info-date">07 Jul 2016</span>
+        <span class="info-title"><i class="icon-folder-open"></i> Category: </span>
+        <span class="info-link"><a href="/StrayBirds/navigations/categories.html#生活-ref" >生活</a></span>
+    </div>
+    <h1>书写具备一致风格、通俗易懂 JavaScript 的原则</h1>
+
+<h2>这是一份用来改进我们代码，以让其总是让人喜爱的持续更新的文档（living document）和新思想。参与构建：（请）fork、clone、branch、commit、push、pull、pull request。</h2>
+
+<ul>
+<li>Rick Waldron <a href="http://twitter.com/rwaldron">@rwaldron</a>, <a href="https://github.com/rwaldron">github</a></li>
+<li>Mathias Bynens <a href="http://twitter.com/mathias">@mathias</a>, <a href="https://github.com/mathiasbynens">github</a></li>
+<li>Schalk Neethling <a href="http://twitter.com/ossreleasefeed">@ossreleasefeed</a>, <a href="https://github.com/ossreleasefeed/">github</a></li>
+<li>Kit Cambridge  <a href="http://twitter.com/kitcambridge">@kitcambridge</a>, <a href="https://github.com/kitcambridge">github</a></li>
+<li>Raynos  <a href="https://github.com/Raynos">github</a></li>
+<li>Matias Arriola <a href="https://twitter.com/MatiasArriola">@MatiasArriola</a>, <a href="https://github.com/MatiasArriola/">github</a></li>
+<li>John Fischer <a href="https://twitter.com/jfroffice">@jfroffice</a>, <a href="https://github.com/jfroffice/">github</a></li>
+<li>Idan Gazit <a href="http://twitter.com/idangazit">@idangazit</a>, <a href="https://github.com/idangazit">github</a></li>
+<li>Leo Balter <a href="http://twitter.com/leobalter">@leobalter</a>, <a href="https://github.com/leobalter">github</a></li>
+<li>Breno Oliveira <a href="http://twitter.com/garu_rj">@garu_rj</a>, <a href="https://github.com/garu">github</a></li>
+<li>Leo Beto Souza <a href="http://twitter.com/leobetosouza">@leobetosouza</a>, <a href="https://github.com/leobetosouza">github</a></li>
+<li>Ryuichi Okumura <a href="http://twitter.com/okuryu">@okuryu</a>, <a href="https://github.com/okuryu">github</a></li>
+<li>Pascal Precht <a href="http://twitter.com/PascalPrecht">@PascalPrecht</a>, <a href="https://github.com/pascalprecht">github</a></li>
+<li>EngForDev <a href="http://www.opentutorials.org/course/167/1363">engfordev</a> - Hwan Min Hong / MinTaek Kwon <a href="http://twitter.com/leoinsight">@leoinsight</a> / Tw Shim <a href="http://twitter.com/marocchino">@marocchino</a>, <a href="https://github.com/marocchino">github</a> / Nassol Kim <a href="http://twitter.com/nassol99">@nassol99</a>, <a href="https://github.com/nassol">github</a> / Juntai Park <a href="http://twitter.com/rkJun">@rkJun</a>, <a href="https://github.com/rkJun">github</a> / Minkyu Shim / Gangmin Won / Justin Yoo <a href="http://twitter.com/justinchronicle">@justinchronicle</a> / Daeyup Lee</li>
+<li>Marco Trulla <a href="http://twitter.com/marcotrulla">@marcotrulla</a>, <a href="https://github.com/Ragnarokkr">github</a></li>
+<li>Alex Navasardyan <a href="http://twitter.com/alexnavasardyan">@alexnavasardyan</a>, <a href="https://github.com/2k00l">github</a></li>
+<li>Mihai Paun <a href="http://twitter.com/mihaipaun">@mihaipaun</a>, <a href="https://github.com/mihaipaun">github</a></li>
+<li>Evgeny Mandrikov <a href="http://twitter.com/_godin_">@_godin_</a>, <a href="https://github.com/Godin">github</a></li>
+<li>Sofish Lin <a href="http://twitter.com/sofish">@sofish</a>, <a href="https://github.com/sofish">github</a></li>
+<li>Дејан Димић <a href="http://twitter.com/dejan_dimic">@dejan_dimic</a>, <a href="https://github.com/rubystream">github</a></li>
+<li>Miloš Gavrilović <a href="http://twitter.com/gavrisimo">@gavrisimo</a>, <a href="https://github.com/gavrisimo">github</a></li>
+<li>Duc Nguyen <a href="https://twitter.com/ducntq">@ducntq</a>, <a href="https://github.com/ducntq">github</a></li>
+<li>James Young <a href="http://twitter.com/jamsyoung">@jamsyoung</a>, <a href="https://github.com/jamsyoung">github</a></li>
+</ul>
+
+<h2>无论有多少人在维护，所有在代码仓库中的代码理应看起来像同一个人写的。</h2>
+
+<h3>下面的清单概括了我作为原作者的所有代码中使用的实践。在我创建的项目中的所有构建代码都必须遵循这些规则。</h3>
+
+<h3>我并不想强制别人在其代码或项目中使用我个人所偏好的代码风格；如果已经存在一个通用编码规范，它必须受到尊崇。</h3>
+
+<blockquote>
+<h3>&quot;对风格的挑刺毫无意义可言。它们必须是指导原则，且你必须遵循。&quot;</h3>
+
+<p><em>Rebecca</em> <em>Murphey</em></p>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<blockquote>
+<h3>&quot;成为一个优秀的成功项目管理者的一个条件是，明白按自己的偏好风格写代码是非常不好的做法。如果成千上万的人都在使用你的代码，那么请尽可能通俗易懂地写出你的代码，而非在规范之下自作聪明地使用自己偏好的风格。&quot;</h3>
+
+<p><em>Idan</em> <em>Gazit</em></p>
+</blockquote>
+
+<h2>翻译版本</h2>
+
+<ul>
+<li><a href="https://github.com/rwldrn/idiomatic.js/">ORIGINAL</a></li>
+<li><a href="https://github.com/rwldrn/idiomatic.js/tree/master/translations/de_DE">German</a></li>
+<li><a href="https://github.com/rwldrn/idiomatic.js/tree/master/translations/fr_FR">French</a></li>
+<li><a href="https://github.com/rwldrn/idiomatic.js/tree/master/translations/es_ES">Spanish</a></li>
+<li><a href="https://github.com/rwldrn/idiomatic.js/tree/master/translations/pt_BR">Portuguese - Brazil</a></li>
+<li><a href="https://github.com/rwldrn/idiomatic.js/tree/master/translations/ko_KR">Korean</a></li>
+<li><a href="https://github.com/rwldrn/idiomatic.js/tree/master/translations/ja_JP">Japanese</a></li>
+<li><a href="https://github.com/rwldrn/idiomatic.js/tree/master/translations/it_IT">Italian</a></li>
+<li><a href="https://github.com/rwldrn/idiomatic.js/tree/master/translations/ru_RU">Russian</a></li>
+<li><a href="https://github.com/rwldrn/idiomatic.js/tree/master/translations/ro_RO">Romanian</a></li>
+<li><a href="https://github.com/rwldrn/idiomatic.js/tree/master/translations/zh_CN">简体中文</a></li>
+<li><a href="https://github.com/rwldrn/idiomatic.js/tree/master/translations/%D1%81%D1%80_%D0%A1%D0%A0">Serbian - cyrilic alphabet</a></li>
+<li><a href="https://github.com/rwldrn/idiomatic.js/tree/master/translations/sr_SR">Serbian - latin aplphabet</a></li>
+</ul>
+
+<h2>重要，非常通用资源：</h2>
+
+<h3>代码质量工具、资源和文献</h3>
+
+<ul>
+<li><a href="http://docs.codehaus.org/display/SONAR/JavaScript+Plugin">JavaScript Plugin</a> for <a href="http://www.sonarsource.org/">Sonar</a></li>
+<li><a href="http://jsperf.com/">jsPerf</a></li>
+<li><a href="http://jsfiddle.net/">jsFiddle</a></li>
+<li><a href="http://jsbin.com/">jsbin</a></li>
+<li><a href="http://javascriptlint.com/">JavaScript Lint (JSL)</a></li>
+<li><a href="http://jshint.com/">jshint</a></li>
+<li><a href="http://jslint.org/">jslint</a></li>
+<li><a href="http://editorconfig.org/">Editorconfig</a></li>
+</ul>
+
+<h2>变聪明点</h2>
+
+<h3><a href="http://es5.github.com/">ECMAScript 5.1 注解版</a></h3>
+
+<h3><a href="http://ecma-international.org/ecma-262/5.1/">EcmaScript 语言规范, 5.1 版</a></h3>
+
+<p>下列文档的现实是：1）不完全版，2）<em>必读</em>。我并不全（不总是，always agree）赞同下列所有作者所写的风格，但有一点可以确定的是：他们具备一致性。除此之外，他们还都是这门语言的权威人士。</p>
+
+<ul>
+<li><a href="http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/">Baseline For Front End Developers</a></li>
+<li><a href="http://eloquentjavascript.net/">Eloquent JavaScript</a></li>
+<li><a href="http://javascriptweblog.wordpress.com/">JavaScript, JavaScript</a></li>
+<li><a href="http://rmurphey.com/">Adventures in JavaScript Development</a></li>
+<li><a href="http://perfectionkills.com/">Perfection Kills</a></li>
+<li><a href="http://www.crockford.com">Douglas Crockford&#39;s Wrrrld Wide Web</a></li>
+<li><a href="https://github.com/rmurphey/js-assessment">JS Assessment</a></li>
+<li><a href="http://anton.kovalyov.net/slides/gothamjs/">Leveraging Code Quality Tools by Anton Kovalyov</a></li>
+</ul>
+
+<h3>编译和部署</h3>
+
+<p>项目必须总是提供一些通用的方法来检验（can be linted）、测试和压缩源码以为产品阶段使用做准备。对于此类工作 Ben Alman 所写的 <a href="https://github.com/cowboy/grunt">grunt</a> 可谓首屈一指，并已替代这个仓库的 “kits/” 目录作官方工具。</p>
+
+<h3>测试工具</h3>
+
+<p>项目 <em>必须</em> 包括某此类型的单元、引用、实现或者功能性测试。使用代码示例并不足以称为“测试”。下面是一系列测试框架，他们只代表自己（谁都不是谁的更好替代品，which are endorsed more than the other）。</p>
+
+<ul>
+<li><a href="http://github.com/jquery/qunit">QUnit</a></li>
+<li><a href="https://github.com/pivotal/jasmine">Jasmine</a></li>
+<li><a href="https://github.com/cloudhead/vows">Vows</a></li>
+<li><a href="https://github.com/visionmedia/mocha">Mocha</a></li>
+<li><a href="http://hirojs.com/">Hiro</a></li>
+<li><a href="https://code.google.com/p/js-test-driver/">JsTestDriver</a></li>
+<li><a href="http://busterjs.org/">Buster.js</a></li>
+<li><a href="http://sinonjs.org/">Sinon.js</a></li>
+</ul>
+
+<h2>目录</h2>
+
+<ul>
+<li><a href="#whitespace">Whitespace</a></li>
+<li><a href="#spacing">Beautiful Syntax</a></li>
+<li><a href="#type">Type Checking (Courtesy jQuery Core Style Guidelines)</a></li>
+<li><a href="#cond">Conditional Evaluation</a></li>
+<li><a href="#practical">Practical Style</a></li>
+<li><a href="#naming">Naming</a></li>
+<li><a href="#misc">Misc</a></li>
+<li><a href="#native">Native &amp; Host Objects</a></li>
+<li><a href="#comments">Comments</a></li>
+<li><a href="#language">One Language Code</a></li>
+</ul>
+
+<hr>
+
+<h2>前言</h2>
+
+<p>下面的章节描述的是一个 <em>合理</em> 的现代 JavaScript 开发风格指南，并非硬性规定。其想送出的核心理念是<em>高度统一的代码风格</em>（the law of code style consistency）。你为项目所择风格都应为最高准则。作为一个描述放置于你的项目中，并链接到这个文档作为代码风格一致性、可读性和可维护性的保证。</p>
+
+<h2>Idiomatic 风格宣言</h2>
+
+<ol>
+<li><p><a name="whitespace">空白</a></p>
+
+<ul>
+<li>永远都不要混用空格和Tab。</li>
+<li>开始一个项目，在写代码之前，选择软缩进（空格）或者 Tab（作为缩进方式），并将其作为<strong>最高准则</strong>。
+
+<ul>
+<li>为了可读, 我总是推荐在你的编辑中设计2个字母宽度的缩进 &mdash; 这等同于两个空格或者两个空格替代一个 Tab。</li>
+</ul></li>
+<li>如果你的编辑器支持，请总是打开 “显示不可见字符” 这个设置。好处是：
+
+<ul>
+<li>保证一致性</li>
+<li>去掉行末的空格</li>
+<li>去掉空行的空格</li>
+<li>提交和对比更具可读性</li>
+</ul></li>
+</ul></li>
+<li><p><a name="spacing">美化语法</a></p>
+
+<p>A. 小括号, 花括号, 换行</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// if/else/for/while/try 通常都有小括号、花括号和多行</span>
+<span class="c1">// 这有助于可读</span>
+
+<span class="c1">// 2.A.1.1</span>
+<span class="c1">// 难辨语法（cramped syntax）的例子</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="nx">doSomething</span><span class="p">();</span>
+
+<span class="k">while</span><span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="nx">iterating</span><span class="o">++</span><span class="p">;</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="nx">someIterativeFn</span><span class="p">();</span>
+
+<span class="c1">// 2.A.1.1</span>
+<span class="c1">// 使用空格来提升可读性</span>
+
+<span class="k">if</span> <span class="p">(</span> <span class="nx">condition</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 语句</span>
+<span class="p">}</span>
+
+<span class="k">while</span> <span class="p">(</span> <span class="nx">condition</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 语句</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 语句</span>
+<span class="p">}</span>
+
+<span class="c1">// 更好的做法:</span>
+
+<span class="kd">var</span> <span class="nx">i</span><span class="p">,</span>
+  <span class="nx">length</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 语句</span>
+<span class="p">}</span>
+
+<span class="c1">// 或者...</span>
+
+<span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nx">length</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span> <span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 语句</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">prop</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span> <span class="nx">prop</span> <span class="k">in</span> <span class="nx">object</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 语句</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span> <span class="kc">true</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 语句</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// 语句</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>B. 赋值, 声明, 函数 ( 命名函数, 函数表达式, 构建函数 )</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 2.B.1.1</span>
+<span class="c1">// 变量</span>
+<span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+  <span class="nx">num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nx">undef</span><span class="p">;</span>
+
+<span class="c1">// 字面量标识:</span>
+<span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[],</span>
+  <span class="nx">object</span> <span class="o">=</span> <span class="p">{};</span>
+
+<span class="c1">// 2.B.1.2</span>
+<span class="c1">// 在一个作用域（函数）内只使用一个 `var` 有助于提升可读性</span>
+<span class="c1">// 并且让你的声明列表变得有条不紊 (还帮你省了几次键盘敲击)</span>
+
+<span class="c1">// 不好</span>
+<span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">qux</span><span class="p">;</span>
+
+<span class="c1">// 好</span>
+<span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nx">bar</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nx">quux</span><span class="p">;</span>
+
+<span class="c1">// 或者..</span>
+<span class="kd">var</span> <span class="c1">// 对这些变量的注释</span>
+<span class="nx">foo</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="nx">bar</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="nx">quux</span><span class="p">;</span>
+
+<span class="c1">// 2.B.1.3</span>
+<span class="c1">// `var` 语句必须总是在各自作用域（函数）顶部</span>
+<span class="c1">// 同样适应于来自 ECMAScript 6 的常量</span>
+
+<span class="c1">// 不好</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="c1">// 在变量前有语句</span>
+
+  <span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nx">qux</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 好</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nx">qux</span><span class="p">;</span>
+
+  <span class="c1">// 所有语句都在变量之后</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 2.B.2.1</span>
+<span class="c1">// 命名函数声明</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span> <span class="nx">arg1</span><span class="p">,</span> <span class="nx">argN</span> <span class="p">)</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="c1">// 使用方法</span>
+<span class="nx">foo</span><span class="p">(</span> <span class="nx">arg1</span><span class="p">,</span> <span class="nx">argN</span> <span class="p">);</span>
+
+<span class="c1">// 2.B.2.2</span>
+<span class="c1">// 命名函数声明</span>
+<span class="kd">function</span> <span class="nx">square</span><span class="p">(</span> <span class="nx">number</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">number</span> <span class="o">*</span> <span class="nx">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 使用方法</span>
+<span class="nx">square</span><span class="p">(</span> <span class="mi">10</span> <span class="p">);</span>
+
+<span class="c1">// 非常不自然的连带传参（continuation passing）风格</span>
+<span class="kd">function</span> <span class="nx">square</span><span class="p">(</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">callback</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="nx">callback</span><span class="p">(</span> <span class="nx">number</span> <span class="o">*</span> <span class="nx">number</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">square</span><span class="p">(</span> <span class="mi">10</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">square</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 回调内容</span>
+<span class="p">});</span>
+
+<span class="c1">// 2.B.2.3</span>
+<span class="c1">// 函数表达式</span>
+<span class="kd">var</span> <span class="nx">square</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">number</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 返回有价值的、相关的内容</span>
+  <span class="k">return</span> <span class="nx">number</span> <span class="o">*</span> <span class="nx">number</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// 带标识符的函数表达式</span>
+<span class="c1">// 这种首选形式有附加的功能让其可以调用自身</span>
+<span class="c1">// 并且在堆栈中有标识符</span>
+<span class="kd">var</span> <span class="nx">factorial</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">factorial</span><span class="p">(</span> <span class="nx">number</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="nx">number</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">number</span> <span class="o">*</span> <span class="nx">factorial</span><span class="p">(</span> <span class="nx">number</span><span class="o">-</span><span class="mi">1</span> <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// 2.B.2.4</span>
+<span class="c1">// 构造函数声明</span>
+<span class="kd">function</span> <span class="nx">FooBar</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+
+  <span class="k">this</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="nx">options</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 使用方法</span>
+<span class="kd">var</span> <span class="nx">fooBar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FooBar</span><span class="p">({</span> <span class="nx">a</span><span class="o">:</span> <span class="s2">&quot;alpha&quot;</span> <span class="p">});</span>
+
+<span class="nx">fooBar</span><span class="p">.</span><span class="nx">options</span><span class="p">;</span>
+<span class="c1">// { a: &quot;alpha&quot; }</span>
+</code></pre></div>
+<p>C. 异常, 细节</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 2.C.1.1</span>
+<span class="c1">// 带回调的函数</span>
+<span class="nx">foo</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// 注意：在第一函数调用的小括号和 `function` 处并没有空格</span>
+<span class="p">});</span>
+
+<span class="c1">// 函数接受 `array` 作为参数，没有空格</span>
+<span class="nx">foo</span><span class="p">([</span> <span class="s2">&quot;alpha&quot;</span><span class="p">,</span> <span class="s2">&quot;beta&quot;</span> <span class="p">]);</span>
+
+<span class="c1">// 2.C.1.2</span>
+<span class="c1">// 函数接受 `object` 作为参数，没有空格</span>
+<span class="nx">foo</span><span class="p">({</span>
+  <span class="nx">a</span><span class="o">:</span> <span class="s2">&quot;alpha&quot;</span><span class="p">,</span>
+  <span class="nx">b</span><span class="o">:</span> <span class="s2">&quot;beta&quot;</span>
+<span class="p">});</span>
+
+<span class="c1">// 函数接受 `string` 字面量作为参数，没有空格</span>
+<span class="nx">foo</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">);</span>
+
+<span class="c1">// 分组用的小括号内部，没有空格</span>
+<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<p>D. 一致性（统一）总是笑到最后的（Consistency Always Wins）</p>
+
+<p>在 2.A-2.C 节，留白作为一个推荐方式被提出，基于单纯的、更高的目的：统一。值得注意的是格式化偏好，像“内部留白”必须是可选的，但在整个项目的源码中必须只存在着一种。</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 2.D.1.1</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 语句</span>
+<span class="p">}</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 语句</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 语句</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 语句</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// 语句</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>E. 引号</p>
+
+<p>无论你选择单引号还是双引号都无所谓，在 JavaScript 中它们在解析上没有区别。而<strong>绝对需要</strong>强制的是一致性。 <strong>永远不要在同一个项目中混用两种引号，选择一种，并保持一致</strong>。</p>
+
+<p>F. 行末和空行</p>
+
+<p>留白会破坏区别并使用变更不可读。考虑包括一个预提交的 hook 自动删除行末和空行中的空格。</p></li>
+<li><p><a name="type">类型检测 (来源于 jQuery Core Style Guidelines)</a></p>
+
+<p>A. 直接类型（实际类型，Actual Types）</p>
+
+<p>String:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">typeof variable === &quot;string&quot;
+</code></pre></div>
+<p>Number:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">typeof variable === &quot;number&quot;
+</code></pre></div>
+<p>Boolean:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">typeof variable === &quot;boolean&quot;
+</code></pre></div>
+<p>Object:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">typeof variable === &quot;object&quot;
+</code></pre></div>
+<p>Array:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Array.isArray( arrayLikeObject )
+(如果可能的话)
+</code></pre></div>
+<p>Node:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">elem.nodeType === 1
+</code></pre></div>
+<p>null:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">variable === null
+</code></pre></div>
+<p>null or undefined:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">variable == null
+</code></pre></div>
+<p>undefined:</p>
+
+<p>全局变量:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">typeof variable === &quot;undefined&quot;
+</code></pre></div>
+<p>局部变量:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">variable === undefined
+</code></pre></div>
+<p>属性:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">object.prop === undefined
+object.hasOwnProperty( prop )
+&quot;prop&quot; in object
+</code></pre></div>
+<p>B. 转换类型（强制类型，Coerced Types）</p>
+
+<p>考虑下面这个的含义...</p>
+
+<p>给定的 HTML:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">id=</span><span class="s">&quot;foo-input&quot;</span> <span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 3.B.1.1</span>
+
+<span class="c1">// `foo` 已经被赋予值 `0`，类型为 `number`</span>
+<span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">// typeof foo;</span>
+<span class="c1">// &quot;number&quot;</span>
+<span class="p">...</span>
+
+<span class="c1">// 在后续的代码中，你需要更新 `foo`，赋予在 input 元素中得到的新值</span>
+
+<span class="nx">foo</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;foo-input&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+
+<span class="c1">// 如果你现在测试 `typeof foo`, 结果将是 `string`</span>
+<span class="c1">// 这意味着你在 if 语句检测 `foo` 有类似于此的逻辑:</span>
+
+<span class="k">if</span> <span class="p">(</span> <span class="nx">foo</span> <span class="o">===</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
+
+  <span class="nx">importantTask</span><span class="p">();</span>
+
+<span class="p">}</span>
+
+<span class="c1">// `importantTask()` 将永远不会被执行，即使 `foo` 有一个值 &quot;1&quot;</span>
+
+<span class="c1">// 3.B.1.2</span>
+
+<span class="c1">// 你可以巧妙地使用 + / - 一元运算符强制转换类型以解决问题:</span>
+
+<span class="nx">foo</span> <span class="o">=</span> <span class="o">+</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;foo-input&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="c1">//    ^ + 一元运算符将它右边的运算对象转换为 `number`</span>
+
+<span class="c1">// typeof foo;</span>
+<span class="c1">// &quot;number&quot;</span>
+
+<span class="k">if</span> <span class="p">(</span> <span class="nx">foo</span> <span class="o">===</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
+
+  <span class="nx">importantTask</span><span class="p">();</span>
+
+<span class="p">}</span>
+
+<span class="c1">// `importantTask()` 将被调用</span>
+</code></pre></div>
+<p>对于强制类型转换这里有几个例子:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 3.B.2.1</span>
+
+<span class="kd">var</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nx">string</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="nx">bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="nx">number</span><span class="p">;</span>
+<span class="c1">// 1</span>
+
+<span class="nx">number</span> <span class="o">+</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="c1">// &quot;1&quot;</span>
+
+<span class="nx">string</span><span class="p">;</span>
+<span class="c1">// &quot;1&quot;</span>
+
+<span class="o">+</span><span class="nx">string</span><span class="p">;</span>
+<span class="c1">// 1</span>
+
+<span class="o">+</span><span class="nx">string</span><span class="o">++</span><span class="p">;</span>
+<span class="c1">// 1</span>
+
+<span class="nx">string</span><span class="p">;</span>
+<span class="c1">// 2</span>
+
+<span class="nx">bool</span><span class="p">;</span>
+<span class="c1">// false</span>
+
+<span class="o">+</span><span class="nx">bool</span><span class="p">;</span>
+<span class="c1">// 0</span>
+
+<span class="nx">bool</span> <span class="o">+</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="c1">// &quot;false&quot;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 3.B.2.2</span>
+
+<span class="kd">var</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nx">string</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+  <span class="nx">bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="nx">string</span> <span class="o">===</span> <span class="nx">number</span><span class="p">;</span>
+<span class="c1">// false</span>
+
+<span class="nx">string</span> <span class="o">===</span> <span class="nx">number</span> <span class="o">+</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="c1">// true</span>
+
+<span class="o">+</span><span class="nx">string</span> <span class="o">===</span> <span class="nx">number</span><span class="p">;</span>
+<span class="c1">// true</span>
+
+<span class="nx">bool</span> <span class="o">===</span> <span class="nx">number</span><span class="p">;</span>
+<span class="c1">// false</span>
+
+<span class="o">+</span><span class="nx">bool</span> <span class="o">===</span> <span class="nx">number</span><span class="p">;</span>
+<span class="c1">// true</span>
+
+<span class="nx">bool</span> <span class="o">===</span> <span class="nx">string</span><span class="p">;</span>
+<span class="c1">// false</span>
+
+<span class="nx">bool</span> <span class="o">===</span> <span class="o">!!</span><span class="nx">string</span><span class="p">;</span>
+<span class="c1">// true</span>
+</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 3.B.2.3</span>
+
+<span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="p">];</span>
+
+<span class="o">!!~</span><span class="nx">array</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">);</span>
+<span class="c1">// true</span>
+
+<span class="o">!!~</span><span class="nx">array</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">);</span>
+<span class="c1">// true</span>
+
+<span class="o">!!~</span><span class="nx">array</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">);</span>
+<span class="c1">// true</span>
+
+<span class="o">!!~</span><span class="nx">array</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">);</span>
+<span class="c1">// false</span>
+
+<span class="c1">// 值得注意的是上述都是 &quot;不必要的聪明&quot;</span>
+<span class="c1">// 采用明确的方案来比较返回的值</span>
+<span class="c1">// 如 indexOf：</span>
+
+<span class="k">if</span> <span class="p">(</span> <span class="nx">array</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span> <span class="s2">&quot;a&quot;</span> <span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 3.B.2.3</span>
+
+<span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">;</span>
+
+<span class="nb">parseInt</span><span class="p">(</span> <span class="nx">num</span><span class="p">,</span> <span class="mi">10</span> <span class="p">);</span>
+
+<span class="c1">// 等价于...</span>
+
+<span class="o">~~</span><span class="nx">num</span><span class="p">;</span>
+
+<span class="nx">num</span> <span class="o">&gt;&gt;</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="nx">num</span> <span class="o">&gt;&gt;&gt;</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">// 结果都是 2</span>
+
+<span class="c1">// 时刻牢记心底, 负值将被区别对待...</span>
+
+<span class="kd">var</span> <span class="nx">neg</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">;</span>
+
+<span class="nb">parseInt</span><span class="p">(</span> <span class="nx">neg</span><span class="p">,</span> <span class="mi">10</span> <span class="p">);</span>
+
+<span class="c1">// 等价于...</span>
+
+<span class="o">~~</span><span class="nx">neg</span><span class="p">;</span>
+
+<span class="nx">neg</span> <span class="o">&gt;&gt;</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">// 结果都是 -2</span>
+<span class="c1">// 但是...</span>
+
+<span class="nx">neg</span> <span class="o">&gt;&gt;&gt;</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">// 结果即是 4294967294</span>
+</code></pre></div></li>
+<li><p><a name="cond">对比运算</a></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 4.1.1</span>
+<span class="c1">// 当只是判断一个 array 是否有长度，相对于使用这个:</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// ...判断真伪, 请使用这种:</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// 4.1.2</span>
+<span class="c1">// 当只是判断一个 array 是否为空，相对于使用这个:</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// ...判断真伪, 请使用这种:</span>
+<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// 4.1.3</span>
+<span class="c1">// 当只是判断一个 string 是否为空，相对于使用这个:</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">string</span> <span class="o">!==</span> <span class="s2">&quot;&quot;</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// ...判断真伪, 请使用这种:</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">string</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// 4.1.4</span>
+<span class="c1">// 当只是判断一个 string 是为空，相对于使用这个:</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">string</span> <span class="o">===</span> <span class="s2">&quot;&quot;</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// ...判断真伪, 请使用这种:</span>
+<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">string</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// 4.1.5</span>
+<span class="c1">// 当只是判断一个引用是为真，相对于使用这个:</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">foo</span> <span class="o">===</span> <span class="kc">true</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// ...判断只需像你所想，享受内置功能的好处:</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">foo</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// 4.1.6</span>
+<span class="c1">// 当只是判断一个引用是为假，相对于使用这个:</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">foo</span> <span class="o">===</span> <span class="kc">false</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// ...使用叹号将其转换为真</span>
+<span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">foo</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// ...需要注意的是：这个将会匹配 0, &quot;&quot;, null, undefined, NaN</span>
+<span class="c1">// 如果你 _必须_ 是布尔类型的 false，请这样用：</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">foo</span> <span class="o">===</span> <span class="kc">false</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// 4.1.7</span>
+<span class="c1">// 如果想计算一个引用可能是 null 或者 undefined，但并不是 false, &quot;&quot; 或者 0,</span>
+<span class="c1">// 相对于使用这个：</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">foo</span> <span class="o">===</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">foo</span> <span class="o">===</span> <span class="kc">undefined</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// ...享受 == 类型强制转换的好处，像这样:</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">foo</span> <span class="o">==</span> <span class="kc">null</span> <span class="p">)</span> <span class="p">...</span>
+
+<span class="c1">// 谨记，使用 == 将会令 `null` 匹配 `null` 和 `undefined`</span>
+<span class="c1">// 但不是 `false`，&quot;&quot; 或者 0</span>
+<span class="kc">null</span> <span class="o">==</span> <span class="kc">undefined</span>
+</code></pre></div>
+<p>总是判断最好、最精确的值，上述是指南而非教条。</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 4.2.1</span>
+<span class="c1">// 类型转换和对比运算说明</span>
+
+<span class="c1">// 首次 `===`，`==` 次之 (除非需要松散类型的对比)</span>
+
+<span class="c1">// `===` 总不做类型转换，这意味着:</span>
+
+<span class="s2">&quot;1&quot;</span> <span class="o">===</span> <span class="mi">1</span><span class="p">;</span>
+<span class="c1">// false</span>
+
+<span class="c1">// `==` 会转换类型，这意味着:</span>
+
+<span class="s2">&quot;1&quot;</span> <span class="o">==</span> <span class="mi">1</span><span class="p">;</span>
+<span class="c1">// true</span>
+
+<span class="c1">// 4.2.2</span>
+<span class="c1">// 布尔, 真 &amp; 伪</span>
+
+<span class="c1">// 布尔:</span>
+<span class="kc">true</span><span class="p">,</span> <span class="kc">false</span>
+
+<span class="c1">// 真:</span>
+<span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="mi">1</span>
+
+<span class="c1">// 伪:</span>
+<span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="kc">NaN</span><span class="p">,</span> <span class="k">void</span> <span class="mi">0</span>
+</code></pre></div></li>
+<li><p><a name="practical">实用风格</a></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 5.1.1</span>
+<span class="c1">// 一个实用的模块</span>
+
+<span class="p">(</span><span class="kd">function</span><span class="p">(</span> <span class="nx">global</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">Module</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="s2">&quot;secret&quot;</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="c1">// 这是一个布尔值</span>
+      <span class="nx">bool</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="c1">// 一个字符串</span>
+      <span class="nx">string</span><span class="o">:</span> <span class="s2">&quot;a string&quot;</span><span class="p">,</span>
+      <span class="c1">// 一个数组</span>
+      <span class="nx">array</span><span class="o">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span> <span class="p">],</span>
+      <span class="c1">// 一个对象</span>
+      <span class="nx">object</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">lang</span><span class="o">:</span> <span class="s2">&quot;en-Us&quot;</span>
+      <span class="p">},</span>
+      <span class="nx">getData</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// 得到 `data` 的值</span>
+        <span class="k">return</span> <span class="nx">data</span><span class="p">;</span>
+      <span class="p">},</span>
+      <span class="nx">setData</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">value</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 返回赋值过的 `data` 的值</span>
+        <span class="k">return</span> <span class="p">(</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">value</span> <span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">};</span>
+  <span class="p">})();</span>
+
+  <span class="c1">// 其他一些将会出现在这里</span>
+
+  <span class="c1">// 把你的模块变成全局对象</span>
+  <span class="nx">global</span><span class="p">.</span><span class="nx">Module</span> <span class="o">=</span> <span class="nx">Module</span><span class="p">;</span>
+
+<span class="p">})(</span> <span class="k">this</span> <span class="p">);</span>
+</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 5.2.1</span>
+<span class="c1">// 一个实用的构建函数</span>
+
+<span class="p">(</span><span class="kd">function</span><span class="p">(</span> <span class="nx">global</span> <span class="p">)</span> <span class="p">{</span>
+
+  <span class="kd">function</span> <span class="nx">Ctor</span><span class="p">(</span> <span class="nx">foo</span> <span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">foo</span> <span class="o">=</span> <span class="nx">foo</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">Ctor</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getFoo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">foo</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="nx">Ctor</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setFoo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">val</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">foo</span> <span class="o">=</span> <span class="nx">val</span> <span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="c1">// 不使用 `new` 来调用构建函数，你可能会这样做：</span>
+  <span class="kd">var</span> <span class="nx">ctor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">foo</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">Ctor</span><span class="p">(</span> <span class="nx">foo</span> <span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="c1">// 把我们的构建函数变成全局对象</span>
+  <span class="nx">global</span><span class="p">.</span><span class="nx">ctor</span> <span class="o">=</span> <span class="nx">ctor</span><span class="p">;</span>
+
+<span class="p">})(</span> <span class="k">this</span> <span class="p">);</span>
+</code></pre></div></li>
+<li><p><a name="naming">命名</a></p>
+
+<p>A. 你并不是一个人肉 编译器/压缩器，所以尝试去变身为其一。</p>
+
+<p>下面的代码是一个极糟命名的典范:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 6.A.1.1</span>
+<span class="c1">// 糟糕命名的示例代码</span>
+
+<span class="kd">function</span> <span class="nx">q</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">i</span><span class="p">,</span><span class="nx">a</span><span class="o">=</span><span class="p">[],</span><span class="nx">els</span><span class="o">=</span><span class="nx">q</span><span class="p">(</span><span class="s2">&quot;#foo&quot;</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">els</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="nx">a</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">els</span><span class="p">[</span><span class="nx">i</span><span class="p">]);}</span>
+</code></pre></div>
+<p>毫无疑问，你写过这样的代码 —— 希望从今天它不再出现。</p>
+
+<p>这里有一份相同逻辑的代码，但拥有更健壮、贴切的命名（和一个可读的结构）：</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 6.A.2.1</span>
+<span class="c1">// 改善过命名的示例代码</span>
+
+<span class="kd">function</span> <span class="nx">query</span><span class="p">(</span> <span class="nx">selector</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span> <span class="nx">selector</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">idx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nx">elements</span> <span class="o">=</span> <span class="p">[],</span>
+  <span class="nx">matches</span> <span class="o">=</span> <span class="nx">query</span><span class="p">(</span><span class="s2">&quot;#foo&quot;</span><span class="p">),</span>
+  <span class="nx">length</span> <span class="o">=</span> <span class="nx">matches</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span> <span class="p">;</span> <span class="nx">idx</span> <span class="o">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">idx</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="nx">elements</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span> <span class="nx">matches</span><span class="p">[</span> <span class="nx">idx</span> <span class="p">]</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>一些额外的命名提示：</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 6.A.3.1</span>
+<span class="c1">// 命名字符串</span>
+
+<span class="err">`</span><span class="nx">dog</span><span class="err">`</span> <span class="err">是一个</span> <span class="nx">string</span>
+
+<span class="c1">// 6.A.3.2</span>
+<span class="c1">// 命名 arrays</span>
+
+<span class="err">`</span><span class="p">[</span><span class="s1">&#39;dogs&#39;</span><span class="p">]</span><span class="err">`</span> <span class="err">是一个包含</span> <span class="err">`</span><span class="nx">dog</span> <span class="err">字符串的</span> <span class="nx">array</span>
+
+<span class="c1">// 6.A.3.3</span>
+<span class="c1">// 命名函数、对象、实例，等</span>
+
+<span class="nx">camlCase</span><span class="p">;</span> <span class="kd">function</span> <span class="err">和</span> <span class="kd">var</span> <span class="err">声明</span>
+
+<span class="c1">// 6.A.3.4</span>
+<span class="c1">// 命名构建器、原型，等</span>
+
+<span class="nx">PascalCase</span><span class="p">;</span> <span class="err">构建函数</span>
+
+<span class="c1">// 6.A.3.5</span>
+<span class="c1">// 命名正则表达式</span>
+
+<span class="nx">rDesc</span> <span class="o">=</span> <span class="c1">//;</span>
+
+<span class="c1">// 6.A.3.6</span>
+<span class="c1">// 来自 Google Closure Library Style Guide</span>
+
+<span class="nx">functionNamesLikeThis</span><span class="p">;</span>
+<span class="nx">variableNamesLikeThis</span><span class="p">;</span>
+<span class="nx">ConstructorNamesLikeThis</span><span class="p">;</span>
+<span class="nx">EnumNamesLikeThis</span><span class="p">;</span>
+<span class="nx">methodNamesLikeThis</span><span class="p">;</span>
+<span class="nx">SYMBOLIC_CONSTANTS_LIKE_THIS</span><span class="p">;</span>
+</code></pre></div>
+<p>B. 面对 <code>this</code></p>
+
+<p>除使用众所周知的 <code>call</code> 和 <code>apply</code> 外，总是优先选择 <code>.bind( this )</code> 或者一个功能上等价于它的。创建 <code>BoundFunction</code> 声明供后续调用，当没有更好的选择时才使用别名。</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 6.B.1</span>
+<span class="kd">function</span> <span class="nx">Device</span><span class="p">(</span> <span class="nx">opts</span> <span class="p">)</span> <span class="p">{</span>
+
+  <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+  <span class="c1">// 新建一个异步的 stream，这个将被持续调用</span>
+  <span class="nx">stream</span><span class="p">.</span><span class="nx">read</span><span class="p">(</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">path</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// 使用 stream 返回 data 最新的值，更新实例的值</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+
+  <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="p">);</span>
+
+  <span class="c1">// 控制事件触发的频率</span>
+  <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="c1">// 发出一个被控制的事件</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;event&quot;</span><span class="p">);</span>
+
+  <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">),</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">freq</span> <span class="o">||</span> <span class="mi">100</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// 假设我们已继承了事件发送器（EventEmitter） ;)</span>
+</code></pre></div>
+<p>当不能运行时，等价于 <code>.bind</code> 的功能在多数现代 JavaScript 库中都有提供。</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 6.B.2</span>
+
+<span class="c1">// 示例：lodash/underscore，_.bind()</span>
+<span class="kd">function</span> <span class="nx">Device</span><span class="p">(</span> <span class="nx">opts</span> <span class="p">)</span> <span class="p">{</span>
+
+  <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+  <span class="nx">stream</span><span class="p">.</span><span class="nx">read</span><span class="p">(</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">path</span><span class="p">,</span> <span class="nx">_</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+
+  <span class="p">},</span> <span class="k">this</span><span class="p">)</span> <span class="p">);</span>
+
+  <span class="nx">setInterval</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;event&quot;</span><span class="p">);</span>
+
+  <span class="p">},</span> <span class="k">this</span><span class="p">),</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">freq</span> <span class="o">||</span> <span class="mi">100</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// 示例：jQuery.proxy</span>
+<span class="kd">function</span> <span class="nx">Device</span><span class="p">(</span> <span class="nx">opts</span> <span class="p">)</span> <span class="p">{</span>
+
+  <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+  <span class="nx">stream</span><span class="p">.</span><span class="nx">read</span><span class="p">(</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">path</span><span class="p">,</span> <span class="nx">jQuery</span><span class="p">.</span><span class="nx">proxy</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+
+  <span class="p">},</span> <span class="k">this</span><span class="p">)</span> <span class="p">);</span>
+
+  <span class="nx">setInterval</span><span class="p">(</span> <span class="nx">jQuery</span><span class="p">.</span><span class="nx">proxy</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;event&quot;</span><span class="p">);</span>
+
+  <span class="p">},</span> <span class="k">this</span><span class="p">),</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">freq</span> <span class="o">||</span> <span class="mi">100</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// 示例：dojo.hitch</span>
+<span class="kd">function</span> <span class="nx">Device</span><span class="p">(</span> <span class="nx">opts</span> <span class="p">)</span> <span class="p">{</span>
+
+  <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+  <span class="nx">stream</span><span class="p">.</span><span class="nx">read</span><span class="p">(</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">path</span><span class="p">,</span> <span class="nx">dojo</span><span class="p">.</span><span class="nx">hitch</span><span class="p">(</span> <span class="k">this</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+
+  <span class="p">})</span> <span class="p">);</span>
+
+  <span class="nx">setInterval</span><span class="p">(</span> <span class="nx">dojo</span><span class="p">.</span><span class="nx">hitch</span><span class="p">(</span> <span class="k">this</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;event&quot;</span><span class="p">);</span>
+
+  <span class="p">}),</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">freq</span> <span class="o">||</span> <span class="mi">100</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>提供一个候选，创建一个 <code>this</code> 的别名，以 <code>self</code> 作为标识符。这很有可能出 bug，应尽可能避免。</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 6.B.3</span>
+
+<span class="kd">function</span> <span class="nx">Device</span><span class="p">(</span> <span class="nx">opts</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+
+  <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+  <span class="nx">stream</span><span class="p">.</span><span class="nx">read</span><span class="p">(</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">path</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">self</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+
+  <span class="p">});</span>
+
+  <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="nx">self</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;event&quot;</span><span class="p">);</span>
+
+  <span class="p">},</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">freq</span> <span class="o">||</span> <span class="mi">100</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>C. 使用 <code>thisArg</code></p>
+
+<p>好几个 ES 5.1 中的原型的方法都内置了一个特殊的 <code>thisArg</code> 标记，尽可能多地使用它</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 6.C.1</span>
+
+<span class="kd">var</span> <span class="nx">obj</span><span class="p">;</span>
+
+<span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">f</span><span class="o">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="nx">q</span><span class="o">:</span> <span class="s2">&quot;qux&quot;</span> <span class="p">};</span>
+
+<span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span> <span class="nx">obj</span> <span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span> <span class="nx">key</span> <span class="p">)</span> <span class="p">{</span>
+
+  <span class="c1">// |this| 现在是 `obj`</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="k">this</span><span class="p">[</span> <span class="nx">key</span> <span class="p">]</span> <span class="p">);</span>
+
+<span class="p">},</span> <span class="nx">obj</span> <span class="p">);</span> <span class="c1">// &lt;-- 最后的参数是 `thisArg`</span>
+
+<span class="c1">// 打印出来...</span>
+
+<span class="c1">// &quot;foo&quot;</span>
+<span class="c1">// &quot;bar&quot;</span>
+<span class="c1">// &quot;qux&quot;</span>
+</code></pre></div>
+<p><code>thisArg</code> 在 <code>Array.prototype.every</code>、 <code>Array.prototype.forEach</code>、 <code>Array.prototype.some</code>、 <code>Array.prototype.map</code>、 <code>Array.prototype.filter</code> 中都可以使用。</p></li>
+<li><p><a name="misc">Misc</a></p>
+
+<p>这个部分将要说明的想法和理念都并非教条。相反更鼓励对现存实践保持好奇，以尝试提供完成一般 JavaScript 编程任务的更好方案。</p>
+
+<p>A. 避免使用 <code>switch</code>，现代方法跟踪（method tracing）将会把带有 switch 表达式的函数列为黑名单。</p>
+
+<p>似乎在最新版本的 Firefox 和 Chrome 都对 <code>switch</code> 语句有重大改进。http://jsperf.com/switch-vs-object-literal-vs-module</p>
+
+<p>值得注意的是，改进可以这里看到:
+https://github.com/rwldrn/idiomatic.js/issues/13</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 7.A.1.1</span>
+<span class="c1">// switch 语句示例</span>
+
+<span class="k">switch</span><span class="p">(</span> <span class="nx">foo</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="s2">&quot;alpha&quot;</span><span class="o">:</span>
+    <span class="nx">alpha</span><span class="p">();</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="s2">&quot;beta&quot;</span><span class="o">:</span>
+    <span class="nx">beta</span><span class="p">();</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">default</span><span class="o">:</span>
+    <span class="c1">// 默认分支</span>
+    <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 7.A.1.2</span>
+<span class="c1">// 一个可支持组合、重用的方法是使用一个对象来存储 “cases”，</span>
+<span class="c1">// 使用一个 function 来做委派：</span>
+
+<span class="kd">var</span> <span class="nx">cases</span><span class="p">,</span> <span class="nx">delegator</span><span class="p">;</span>
+
+<span class="c1">// 返回值仅作说明用</span>
+<span class="nx">cases</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">alpha</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 语句</span>
+    <span class="c1">// 一个返回值</span>
+    <span class="k">return</span> <span class="p">[</span> <span class="s2">&quot;Alpha&quot;</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="p">];</span>
+  <span class="p">},</span>
+  <span class="nx">beta</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 语句</span>
+    <span class="c1">// 一个返回值</span>
+    <span class="k">return</span> <span class="p">[</span> <span class="s2">&quot;Beta&quot;</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="p">];</span>
+  <span class="p">},</span>
+  <span class="nx">_default</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 语句</span>
+    <span class="c1">// 一个返回值</span>
+    <span class="k">return</span> <span class="p">[</span> <span class="s2">&quot;Default&quot;</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="p">];</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">delegator</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">args</span><span class="p">,</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">delegate</span><span class="p">;</span>
+
+  <span class="c1">// 把 `argument` 转换成数组</span>
+  <span class="nx">args</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span> <span class="nx">arguments</span> <span class="p">);</span>
+
+  <span class="c1">// 从 `argument` 中抽出最前一个值</span>
+  <span class="nx">key</span> <span class="o">=</span> <span class="nx">args</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+
+  <span class="c1">// 调用默认分支</span>
+  <span class="nx">delegate</span> <span class="o">=</span> <span class="nx">cases</span><span class="p">.</span><span class="nx">_default</span><span class="p">;</span>
+
+  <span class="c1">// 从对象中对方法进行委派操作</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="nx">cases</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span> <span class="nx">key</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">delegate</span> <span class="o">=</span> <span class="nx">cases</span><span class="p">[</span> <span class="nx">key</span> <span class="p">];</span>
+  <span class="p">}</span>
+
+  <span class="c1">// arg 的作用域可以设置成特定值，</span>
+  <span class="c1">// 这种情况下，|null| 就可以了</span>
+  <span class="k">return</span> <span class="nx">delegate</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">args</span> <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// 7.A.1.3</span>
+<span class="c1">// 使用 7.A.1.2 中的 API:</span>
+
+<span class="nx">delegator</span><span class="p">(</span> <span class="s2">&quot;alpha&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">);</span>
+<span class="c1">// [ &quot;Alpha&quot;, 5 ]</span>
+
+<span class="c1">// 当然 `case` key 的值可以轻松地换成任意值</span>
+
+<span class="kd">var</span> <span class="nx">caseKey</span><span class="p">,</span> <span class="nx">someUserInput</span><span class="p">;</span>
+
+<span class="c1">// 有没有可能是某种形式的输入?</span>
+<span class="nx">someUserInput</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span> <span class="nx">someUserInput</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="nx">caseKey</span> <span class="o">=</span> <span class="s2">&quot;alpha&quot;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">caseKey</span> <span class="o">=</span> <span class="s2">&quot;beta&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 或者...</span>
+
+<span class="nx">caseKey</span> <span class="o">=</span> <span class="nx">someUserInput</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="o">?</span> <span class="s2">&quot;alpha&quot;</span> <span class="o">:</span> <span class="s2">&quot;beta&quot;</span><span class="p">;</span>
+
+<span class="c1">// 然后...</span>
+
+<span class="nx">delegator</span><span class="p">(</span> <span class="nx">caseKey</span><span class="p">,</span> <span class="nx">someUserInput</span> <span class="p">);</span>
+<span class="c1">// [ &quot;Beta&quot;, 1 ]</span>
+
+<span class="c1">// 当然还可以这样搞...</span>
+
+<span class="nx">delegator</span><span class="p">();</span>
+<span class="c1">// [ &quot;Default&quot;, 0 ]</span>
+</code></pre></div>
+<p>B. 提前返回值提升代码的可读性并且没有太多性能上的差别</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// 7.B.1.1</span>
+<span class="c1">// 不好:</span>
+<span class="kd">function</span> <span class="nx">returnLate</span><span class="p">(</span> <span class="nx">foo</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">ret</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span> <span class="nx">foo</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">ret</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">ret</span> <span class="o">=</span> <span class="s2">&quot;quux&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">ret</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 好:</span>
+
+<span class="kd">function</span> <span class="nx">returnEarly</span><span class="p">(</span> <span class="nx">foo</span> <span class="p">)</span> <span class="p">{</span>
+
+  <span class="k">if</span> <span class="p">(</span> <span class="nx">foo</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&quot;foo&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="s2">&quot;quux&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li><p><a name="native">原生 &amp; 宿主对象（注：其实一直觉得 Host Objects 真不应该翻译过来，这是就按一般书的写法翻出来吧）</a></p>
+
+<p>最基本的原则是:</p>
+
+<h3>不要干任何蠢事，事情总会变好的。</h3>
+
+<p>为了加强这个观念，请观看这个演示:</p>
+
+<h4>“一切都被允许: 原生扩展” by Andrew Dupont (JSConf2011, Portland, Oregon)</h4>
+
+<p>http://www.everytalk.tv/talks/441-JSConf-Everything-is-Permitted-Extending-Built-ins</p></li>
+<li><p><a name="comments">注释</a></p></li>
+</ol>
+
+<ul>
+<li>单行注释放于代码上方为首选</li>
+<li>多行也可以</li>
+<li>行末注释应被避免!</li>
+<li>JSDoc 的方式也不错，但需要比较多的时间</li>
+</ul>
+
+<ol>
+<li><p><a name="language">单用一门语言</a></p>
+
+<p>无论是什么语言程序维护者（或团队）规定使用何种语言，程序都应只用同一种语言书写。</p></li>
+</ol>
+
+<h2>附录</h2>
+
+<h3>前置逗号（Comma First）</h3>
+
+<p>所有使用这个文档作为基本风格指南的项目都不允许前置逗号的代码格式，除非明确指定或者作者要求。</p>
+
+    <nav class="article-previous fn-clear">
+        
+        <a class="prev" href="//%E7%94%9F%E6%B4%BB/2016/07/07/hahaha.html" rel="bookmark">&laquo;&nbsp;飞鸟集</a>
+        
+        
+    </nav>
+    <div class="comment">
+        
+        <div id="disqus_thread"></div>
+        
+    </div>
+</div>
+
+
+                    
+                        <div id="disqus_thread"></div>
+ <script type="text/javascript">
+     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+     var disqus_shortname = 'minixalpha'; // required: replace example with your forum shortname
+
+     /* * * DON'T EDIT BELOW THIS LINE * * */
+     (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+ </script>
+ <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+                    
+                </div>
+                <div class="aside">
+                    <div class="aside-contact">
+                        <h4 class="title">About me</h4>
+                        <div class="det fn-clear">
+                            <div class="det-image">
+                                <img src="https://avatars.githubusercontent.com/minixalpha" />
+                            </div>
+                            <div class="det-text">
+                                <p>我是 minixalpha</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="aside-item">
+                        <h4 class="title">Recent Posts</h4>
+                        <ul class="list">
+                            
+                                <li><a href="/%E7%94%9F%E6%B4%BB/2016/07/07/javascript-style-guide.html" title="书写具备一致风格、通俗易懂 JavaScript 的原则" rel="bookmark">书写具备一致风格、通俗易懂 JavaScript 的原则</a></li>
+                            
+                                <li><a href="/%E7%94%9F%E6%B4%BB/2016/07/07/hahaha.html" title="飞鸟集" rel="bookmark">飞鸟集</a></li>
+                            
+                                <li><a href="/%E7%94%9F%E6%B4%BB/2015/05/10/life.html" title="飞到我的窗前唱歌" rel="bookmark">飞到我的窗前唱歌</a></li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="aside-item">
+                        <h4 class="title">Links</h4>
+                        <ul class="list">
+                            
+                                
+                                    
+                                    <li><a href="http://www.zhanxin.info" title="掌心" target="_blank">掌心</a></li>
+                                    
+                                    <li><a href="http://jekyllrb.com" title="Jekyll" target="_blank">Jekyll</a></li>
+                                    
+                                    <li><a href="http://www.zhanxin.info/themes.html" title="Jekyll Theme" target="_blank">Jekyll Theme</a></li>
+                                    
+                                
+                            
+                                
+                            
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="footer">
+                <p>Copyright 2013. All rights reserved. Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, Design by <a href="http://www.zhanxin.info" target="_blank">zhanxin.info</a>.</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://lib.sinaapp.com/js/jquery/1.8.3/jquery.min.js"></script>
+        
+    </body>
+</html>

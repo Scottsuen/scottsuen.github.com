@@ -26,7 +26,7 @@
    <title>唯独恩典</title>
    <link href="http://scottsuen.github.io/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://scottsuen.github.io" rel="alternate" type="text/html" />
-   <updated>2016-07-07T20:57:33+08:00</updated>
+   <updated>2016-07-07T21:02:37+08:00</updated>
    <id>http://scottsuen.github.io</id>
    <author>
      <name></name>
@@ -44,11 +44,11 @@
    </entry>
    
    <entry>
-     <title>Resume</title>
+     <title>this is my resume</title>
      <link href="/resume"/>
      <updated>2016-07-07T00:00:00+08:00</updated>
      <id>/resume</id>
-     <content type="html">&lt;h1 id=&quot;this-is--my-resumen&quot;&gt;this is  my resumen&lt;/h1&gt;
+     <content type="html">&lt;h1 id=&quot;this-is--my-resume&quot;&gt;this is  my resume&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;姓名：孙晋明&lt;/li&gt;

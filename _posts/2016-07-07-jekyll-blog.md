@@ -5,8 +5,6 @@ category: Jekyll
 comments: true
 ---
 
-# 使用 GitHub, Jekyll 打造自己的独立博客
-
 [GitHub](https://github.com/)是一个代码托管网站，现在很多开源项目都放在GitHub上。
 利用GitHub，可以让全球各地的程序员们一起协作开发。GitHub 提供了一种功能，叫
 [GitHub Pages](https://help.github.com/categories/20/articles), 利用这个功能，我

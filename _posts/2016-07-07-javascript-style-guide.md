@@ -5,8 +5,6 @@ category: 技术
 comments: true
 ---
 
-# 书写具备一致风格、通俗易懂 JavaScript 的原则
-
 ## 这是一份用来改进我们代码，以让其总是让人喜爱的持续更新的文档（living document）和新思想。参与构建：（请）fork、clone、branch、commit、push、pull、pull request。
 
 * Rick Waldron [@rwaldron](http://twitter.com/rwaldron), [github](https://github.com/rwaldron)

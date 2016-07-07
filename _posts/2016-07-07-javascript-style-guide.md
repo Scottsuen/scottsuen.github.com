@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 书写具备一致风格、通俗易懂 JavaScript 的原则
-category: 生活
+category: 技术
 comments: true
 ---
 

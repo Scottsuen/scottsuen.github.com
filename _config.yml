@@ -116,7 +116,7 @@ disqus:
 #################################### global configure #######################################
 
 username: scottsuen
-baseurl: 
+baseurl:
 markdown: redcarpet
 safe: false
 highlighter: pygments
